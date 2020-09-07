@@ -10,6 +10,7 @@ export default class CustomSection extends LitElement {
             #content {
                 padding: var(--section-v-padding, 2.5%) var(--section-h-padding, 5%);
                 display: flex;
+                text-align: center;
                 align-items: center;
                 justify-content: center;
             }

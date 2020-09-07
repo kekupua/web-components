@@ -1,3 +1,5 @@
-import '../Button.js';
-import '../Header.js';
-import '../Page.js';
+import './button/Button';
+import Card from './card/Card';
+import './header/Header';
+import './page/Page';
+import Section from './section/Section';
