@@ -1,15 +1,14 @@
-import { Header } from './Header';
+import {html} from 'lit-element';
+import './Header';
 
 export default {
-  title: 'Example/Header',
+  title: 'Components/Header',
 };
 
-const Template = (args) => Header(args);
-
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const Overview = () => html`
+  <s-header
+    heading="Heading"
+    subheading="Sub Heading"
+    description="Description"
+  ></s-header>
+`;

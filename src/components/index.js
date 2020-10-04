@@ -1,5 +1,8 @@
+import '../styles/tokens.css';
+
 import './button/Button';
-import Card from './card/Card';
+import './card/Card';
 import './header/Header';
-import './page/Page';
-import Section from './section/Section';
+import './image/Image';
+import './text/Text';
+import './section/Section';

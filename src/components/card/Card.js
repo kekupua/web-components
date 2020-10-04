@@ -17,7 +17,6 @@ export default class Card extends LitElement {
         return css`
             #container {
                 width: ${sizes[12]}px;
-                border-radius: ${cardBorderRadius}px;
                 border: 1px solid grey;
                 box-shadow: rgb(136, 136, 136) 0px 2px ${sizes[1]}px;
                 display: inline-flex;
@@ -50,7 +49,6 @@ export default class Card extends LitElement {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: ${cardBorderRadius}px ${cardBorderRadius}px 0 0;
             }
             #text-section {
                 width: 100%;

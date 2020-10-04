@@ -1,0 +1,27 @@
+:root {
+    /* Sizes */
+    --sizes-base: 8px;
+
+    --sizes-025: calc(var(--sizes-base) * .25);
+    --sizes-050: calc(var(--sizes-base) * .5);
+    --sizes-075: calc(var(--sizes-base) * .75);
+    --sizes-100: var(--sizes-base);
+    --sizes-150: calc(var(--sizes-base) * 1.5);
+    --sizes-200: calc(var(--sizes-base) * 2);
+    --sizes-300: calc(var(--sizes-base) * 3);
+    --sizes-400: calc(var(--sizes-base) * 4); 
+    --sizes-500: calc(var(--sizes-base) * 5);
+    --sizes-600: calc(var(--sizes-base) * 6);
+    --sizes-700: calc(var(--sizes-base) * 7);
+    --sizes-800: calc(var(--sizes-base) * 8);
+    --sizes-900: calc(var(--sizes-base) * 9);
+
+    /* Colors */
+
+    --colors-gray-100: rgb(105,105,105);
+    --colors-gray-200: rgb(128,128,128);
+    --colors-gray-300: rgb(169,169,169);
+    --colors-gray-400: rgb(192,192,192);
+    --colors-gray-500: rgb(211,211,211);
+    --colors-gray-600: rgb(220,220,220);
+}

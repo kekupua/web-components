@@ -6,7 +6,26 @@ export default {
 };
 
 export const Default = () => html`
-  <s-section>
-    <h1>Some Heading</h1>
-  </s-section>
+<style>
+#splash::part(container) {
+  height: 100vh;
+  max-height: 100%;
+}
+s-section {
+  --primary-bg-color: var(--colors-gray-600);
+  --secondary-bg-color: var(--colors-gray-400);
+}
+</style>
+<s-section id="splash" heading="Sean Teramae">
+  <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
+</s-section>
+<s-section heading="Section 1" type="secondary" alignment="left">
+  <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
+</s-section>
+<s-section heading="Section 2" alignment="right">
+  <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
+</s-section>
+<s-section heading="Section 3" type="secondary"  alignment="left">
+  <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
+</s-section>
 `
