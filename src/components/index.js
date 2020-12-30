@@ -4,6 +4,7 @@ import './card/Card';
 import './footer/Footer';
 import './header/Header';
 import './image/Image';
-import './text/Text';
+import './navigation/Navigation';
 import './section/Section';
+import './text/Text';
 import '../pages/Home/Home';
