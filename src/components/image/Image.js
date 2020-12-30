@@ -1,12 +1,14 @@
 import { LitElement, html, css } from 'lit-element';
 import { ifDefined } from 'lit-html/directives/if-defined';
+import {renderAspectRatio} from '../../lib/aspectRatio';
 
 export default class Image extends LitElement {
     static get properties() {
         return {
             src: {type: String},
             alt: {type: String},
-            clip: {type: String} // Enum ["circle", "diamond", "triangle"]
+            clip: {type: String}, // Enum ["circle", "diamond", "triangle"]
+            aspectRatio: {type: String, attribute: "aspect-ratio"}
         }
     }
     
@@ -25,9 +27,10 @@ export default class Image extends LitElement {
     }
     
     render() {
-        return html`
-            <img id="image" part="image" src="${this.src}" alt="${ifDefined(this.alt)}">
+        let template = html`
+            <img id="image" part="container" src="${this.src}" alt="${ifDefined(this.alt)}">
         `;
+        return renderAspectRatio("16:9", template);
     }
 }
 

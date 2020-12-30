@@ -1,20 +1,41 @@
-import { html } from 'lit-html';
-import './button.css';
+import {LitElement, html, css} from 'lit-element';
+import { ifDefined } from 'lit-html/directives/if-defined';
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, backgroundColor, size, label, onClick }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export default class Button extends LitElement {
+    static get properties() {
+        return {
+            type: {type: String},
+            label: {type: String},
+            href: {type: String}
+        }
+    }
 
-  return html`
-    <button
-      type="button"
-      class=${['storybook-button', `storybook-button--${size || 'medium'}`, mode].join(' ')}
-      style=${backgroundColor && { backgroundColor }}
-      @click=${onClick}
-    >
-      ${label}
-    </button>
-  `;
-};
+    static get styles() {
+        return css`
+        :host {
+            display: inline-block;
+        }
+        #container {
+            display: inline-block;
+            cursor: pointer;
+            border-radius: var(--size-050);
+            padding: var(--size-200);
+            background-color: var(--colors-gray-400);
+            color: var(--colors-black-800);
+        }
+        #container:hover {
+            background-color: var(--colors-gray-600);
+            color: var(--colors-black);
+        }
+        `;
+    }
+
+    render() {
+        return html` <a id="container" href=${ifDefined(this.href)}>
+            <s-text id="text" exportparts="container: content" label=${this.label}>${this.label}</s-text>
+        </a>
+        `;
+    }
+}
+
+customElements.define('s-button', Button);

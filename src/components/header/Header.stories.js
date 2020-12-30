@@ -7,8 +7,8 @@ export default {
 
 export const Overview = () => html`
   <s-header
-    heading="Heading"
-    subheading="Sub Heading"
-    description="Description"
+    heading="Life on Venus? Scientists hunt for the truth"
+    subheading="Interest in Earth’s hellish neighbour explodes after the detection of phosphine, a potential marker of life."
+    description="Description: Interest in Earth’s hellish neighbour explodes after the detection of phosphine, a potential marker of life."
   ></s-header>
 `;

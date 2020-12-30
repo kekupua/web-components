@@ -1,0 +1,65 @@
+html {
+    scroll-behavior: smooth;
+}
+#masthead::part(container),
+#projects::part(container)  {
+    background: var(--section-bg-1);
+}
+#about::part(container) {
+    background: var(--section-bg-2);
+}
+#masthead::part(container) {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+#name-header::part(heading) {
+    font-size: 2em;
+}
+#category-header::part(heading) {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--colors-theme-4);
+}
+::part(description) {
+    font-size: 1.25em;
+    color: var(--colors-gray-100);
+}
+#main-text {
+    display: grid;
+    column-gap: var(--spacer-400);
+}
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+}
+.categories ion-icon {
+    font-size: 128px;
+}
+.category ion-icon {
+    display: block;
+}
+@media screen and (min-width: 600px) {
+    #name-header::part(heading) {
+        font-size: 3em;
+    }
+    #masthead::part(container) {
+        height: 300px;
+    }
+}
+@media screen and (min-width: 900px) {
+    #name-header::part(heading) {
+        font-size: 4em;
+    }
+    #masthead::part(container) {
+        height: 400px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #name-header::part(heading) {
+        font-size: 5em;
+    }
+    #masthead::part(container) {
+        height: 500px;
+    }
+}

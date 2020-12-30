@@ -6,7 +6,5 @@ export default {
 };
 
 export const Default = () => html`
-  <s-nav
-    heading="Sean T."
-  ></s-nav>
+  <s-nav alignment="right"></s-nav>
 `

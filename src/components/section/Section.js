@@ -11,28 +11,29 @@ export default class CustomSection extends LitElement {
     }
     static get styles() {
         return css`
+            :host {
+                display: block;
+            }
             #container {
                 width: 100%;
-                background-color: var(--primary-bg-color, white);
-            }
-            :host([type="secondary"]) #container {
-                background-color: var(--secondary-bg-color, white);
+                background-color: white;
+                display: flex;
+                text-align: left;
             }
             #content {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
+                max-width: var(--content-max-width);
+                padding: var(--spacer-800);
+            }
+            :host([type="secondary"]) #container {
+                background-color: gray;
+            }
+            :host([alignment="center"]) #container{
                 text-align: center;
-                align-items: center;
                 justify-content: center;
             }
-            :host([alignment="left"]) #content{
-                text-align: left;
-                align-items: flex-start;
-            }
-            :host([alignment="right"]) #content{
+            :host([alignment="right"]) #container{
                 text-align: right;
-                align-items: flex-end;
+                justify-content: flex-end;
             }
         `
     }
@@ -43,9 +44,9 @@ export default class CustomSection extends LitElement {
                 <div id="content" part="content">
                     <slot name="header">
                         <s-header part="header" heading="${ifDefined(this.heading)}" subheading="${ifDefined(this.subheading)}" description=${ifDefined(this.description)}
-                            exposeparts="heading, subheading, description"></s-header>
+                        exportparts="heading subheading description"></s-header>
                     </slot>
-                    <slot></slot>
+                    <slot part="default-content"></slot>
                 </div>
             </section>
         `

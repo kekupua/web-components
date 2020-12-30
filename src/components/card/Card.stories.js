@@ -20,6 +20,9 @@ s-card.icon-image::part(image-tag) {
     description="Lorem ipsum dior"
     image="https://via.placeholder.com/1600x900"
   ></s-card>
+`
+
+export const Wide = () => html`
   <h1>Wide</h1>
   <s-card
     heading="Some Heading"
@@ -37,4 +40,4 @@ s-card.icon-image::part(image-tag) {
     image="https://via.placeholder.com/40x30"
     wide
   ></s-card>
-`
+`;
