@@ -1,7 +1,7 @@
 {
-  "name": "web-components",
+  "name": "@kekupua/web-components",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of Web Components built using Lit Element",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,8 @@
     "storybook": "start-storybook -p 6006 --quiet",
     "build": "rollup -c -w",
     "build-storybook": "build-storybook",
-    "watch:styles": "sass --watch src/styles/sass:public/stylesheets"
+    "watch:styles": "sass --watch src/styles/sass:public/stylesheets",
+    "publish:npm": "npm run publish --access public"
   },
   "repository": {
     "type": "git",
