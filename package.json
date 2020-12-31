@@ -2,7 +2,7 @@
   "name": "@kekupua/web-components",
   "version": "1.0.0",
   "description": "A collection of Web Components built using Lit Element",
-  "main": "index.js",
+  "main": "assets/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run build\" \"npm run storybook\" -c magenta,yellow",
