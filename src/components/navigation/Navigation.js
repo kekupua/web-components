@@ -22,6 +22,7 @@ export default class Navigation extends LitElement {
                 position: sticky;
                 top: 0;
                 background: var(--section-bg-1);
+                z-index: var(--z-index-nav);
             }
             .nav-item::part(container) {
                 padding: var(--size-300);
@@ -40,9 +41,9 @@ export default class Navigation extends LitElement {
     }
     mapNavItems(items) {
         return items ? items.map((item, index) => {
-            return html`<s-text href="${item.href}" class="nav-item" part="nav-item nav-item-${index}">
+            return html`<st-text href="${item.href}" class="nav-item" part="nav-item nav-item-${index}">
                 ${item.description}
-            </s-text>`;
+            </st-text>`;
         }) : null;
     }
     render() {
@@ -58,4 +59,4 @@ export default class Navigation extends LitElement {
     }
 }
 
-customElements.define('s-nav', Navigation);
+customElements.define('st-nav', Navigation);

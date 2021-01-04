@@ -21,6 +21,8 @@ export default class Header extends LitElement {
     return css`
       :host {
         width: 100%;
+        display: inline-block;
+        margin-bottom: var(--size-200);
       }
       #content {
         display: flex;
@@ -37,26 +39,24 @@ export default class Header extends LitElement {
   render() {
     return html`
       <div id="container" part="container">
-        <div id="content" part="content">
-          <slot name="subheading">
-            ${this.subheading ? html`
-              <s-text id="subheading" exportparts="container: subheading" name=${ifDefined(this.subheadingHref)} href=${ifDefined(this.subheadingHref)} type="h${parseInt(this.hLevel) + 1}">${this.subheading}</s-text>
-            ` : null }
-          </slot>
-          <slot name="heading">
-            ${this.heading ? html`
-              <s-text id="heading" accent exportparts="container: heading" name=${ifDefined(this.headingHref)} href=${ifDefined(this.headingHref)} type="h${this.hLevel}">${this.heading}</s-text>
-            ` : null}
-          </slot>
-          <slot name="description">
-            ${this.description ? html`
-            <s-text id="description" exportparts="container : description" type="p">${this.description}</s-text>
-            ` : null }
-          </slot>
-        </div>
+        <slot name="subheading">
+          ${this.subheading ? html`
+            <st-text id="subheading" exportparts="container: subheading" href=${ifDefined(this.subheadingHref)} type="h${parseInt(this.hLevel) + 1}">${this.subheading}</st-text>
+          ` : null }
+        </slot>
+        <slot name="heading">
+          ${this.heading ? html`
+            <st-text id="heading" accent exportparts="container: heading" href=${ifDefined(this.headingHref)} type="h${this.hLevel}">${this.heading}</st-text>
+          ` : null}
+        </slot>
+        <slot name="description">
+          ${this.description ? html`
+          <st-text id="description" exportparts="container : description" type="p">${this.description}</st-text>
+          ` : null }
+        </slot>
       </div>
     `;
   }
 }
 
-customElements.define('s-header', Header);
+customElements.define('st-header', Header);

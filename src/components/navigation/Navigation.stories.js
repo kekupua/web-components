@@ -6,5 +6,5 @@ export default {
 };
 
 export const Default = () => html`
-  <s-nav alignment="right"></s-nav>
+  <st-nav alignment="right"></st-nav>
 `

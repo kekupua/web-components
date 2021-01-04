@@ -50,7 +50,7 @@ export default class Text extends LitElement {
             tag.classList.add('accent');
         }
         if (this.href) {
-            return html` <a href="${this.href}" part="container">
+            return html` <a href="${this.href}" name=${this.href.slice(1)} part="container">
                 ${tag}
             </a>`;
         }
@@ -59,4 +59,4 @@ export default class Text extends LitElement {
     }
 }
 
-customElements.define('s-text', Text)
+customElements.define('st-text', Text)

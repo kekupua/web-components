@@ -6,5 +6,5 @@ export default {
 };
 
 export const Default = () => html`
-  <s-button label=${"Hello World"}></s-button>
+  <st-button label=${"Hello World"}></st-button>
 `;

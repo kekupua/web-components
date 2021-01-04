@@ -6,5 +6,5 @@ export default {
 };
 
 export const Default = () => html`
-  <s-footer></s-footer>
+  <st-footer></st-footer>
 `;

@@ -14,6 +14,12 @@ export default class Image extends LitElement {
     
     static get styles() {
         return css`
+            :host {
+                display: inline-block;
+            }
+            img {
+                vertical-align: top;
+            }
             :host([clip="circle"]) #image {
                 clip-path: circle(50%);
             }
@@ -30,8 +36,8 @@ export default class Image extends LitElement {
         let template = html`
             <img id="image" part="container" src="${this.src}" alt="${ifDefined(this.alt)}">
         `;
-        return renderAspectRatio("16:9", template);
+        return template;
     }
 }
 
-customElements.define('s-image', Image);
+customElements.define('st-image', Image);

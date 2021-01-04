@@ -18,9 +18,11 @@ export default class CustomSection extends LitElement {
                 width: 100%;
                 background-color: white;
                 display: flex;
+                justify-content: center;
                 text-align: left;
             }
             #content {
+                width: 100%;
                 max-width: var(--content-max-width);
                 padding: var(--spacer-800);
             }
@@ -43,8 +45,8 @@ export default class CustomSection extends LitElement {
             <section id="container" part="container">
                 <div id="content" part="content">
                     <slot name="header">
-                        <s-header part="header" heading="${ifDefined(this.heading)}" subheading="${ifDefined(this.subheading)}" description=${ifDefined(this.description)}
-                        exportparts="heading subheading description"></s-header>
+                        <st-header part="header" heading="${ifDefined(this.heading)}" subheading="${ifDefined(this.subheading)}" description=${ifDefined(this.description)}
+                        exportparts="heading subheading description"></st-header>
                     </slot>
                     <slot part="default-content"></slot>
                 </div>
@@ -53,4 +55,4 @@ export default class CustomSection extends LitElement {
     }
 }
 
-customElements.define('s-section', CustomSection);
+customElements.define('st-section', CustomSection);

@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;400;700&display=swap');
 /* Breakpoints: 600, 900, 1200, 1800 */ 
 :root {
+    scroll-behavior: smooth;
     /* Fonts */
     --font-family-default: "Lato";
     --font-family-accent: "Montserrat";
+    
     /* Sizes */
     --size-base: 8px;
     --size-025: calc(var(--size-base) * .25);
@@ -46,7 +48,6 @@
     --colors-gray-500: rgb(211,211,211);
     --colors-gray-600: rgb(220,220,220);
 
-    /* Colors */
     --colors-white-100: rgba(255, 255, 255, 0.1);
     --colors-white-200: rgba(255, 255, 255, 0.2);
     --colors-white-300: rgba(255, 255, 255, 0.3);
@@ -56,7 +57,6 @@
     --colors-white-700: rgba(255, 255, 255, 0.7);
     --colors-white-800: rgba(255, 255, 255, 0.8);
     --colors-white-900: rgba(255, 255, 255, 0.9);
-    --colors-white: rgba(255, 255, 255, 1);
     
     --colors-black-100: rgba(0, 0, 0, 0.1);
     --colors-black-200: rgba(0, 0, 0, 0.2);
@@ -67,7 +67,6 @@
     --colors-black-700: rgba(0, 0, 0, 0.7);
     --colors-black-800: rgba(0, 0, 0, 0.8);
     --colors-black-900: rgba(0, 0, 0, 0.9);
-    --colors-black: rgba(0, 0, 0, 1);
 
     --colors-theme-1: #fffeec;
     --colors-theme-2: #fbf9e1;
@@ -75,10 +74,10 @@
     --colors-theme-4: #19647E;
     --colors-theme-5: #28AFB0;
 
-    /* Constants */
     --section-bg-1: #fbf9e1;
     --section-bg-2: #fffeec;
-
+    /* Constants */
+    --z-index-nav: 50;
 }
 @media screen and (min-width: 760px) {
     :root {

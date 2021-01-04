@@ -6,11 +6,11 @@ export default {
 };
 
 export const Overview = () => html`
-    <s-image src="https://via.placeholder.com/200"></s-image>
+    <st-image src="https://via.placeholder.com/200"></st-image>
 
-    <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
+    <st-image src="https://via.placeholder.com/200" clip="circle"></st-image>
 
-    <s-image src="https://via.placeholder.com/200" clip="diamond"></s-image>
+    <st-image src="https://via.placeholder.com/200" clip="diamond"></st-image>
 
-    <s-image src="https://via.placeholder.com/200" clip="triangle"></s-image>
+    <st-image src="https://via.placeholder.com/200" clip="triangle"></st-image>
 `

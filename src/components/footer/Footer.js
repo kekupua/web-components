@@ -3,13 +3,16 @@ import {LitElement, html, css} from 'lit-element';
 export default class Footer extends LitElement {
     static get styles() {
         return css`
+            :host {
+                display: block;
+            }
             #section::part(container) {
                 background: #37392E;
                 text-align: center;
                 justify-content: center;
             }
-            s-header::part(heading),
-            s-header::part(description) {
+            st-header::part(heading),
+            st-header::part(description) {
                 color: var(--colors-white-700);
                 margin-bottom: var(--size-100);
             }
@@ -28,7 +31,6 @@ export default class Footer extends LitElement {
                 #section::part(container) {
                     background: #37392E;
                     text-align: left;
-                    justify-content: flex-start;
                 }
             }
         `;
@@ -37,13 +39,12 @@ export default class Footer extends LitElement {
     render() {
         return html`
         <footer id="container" part="container">
-            <s-section id="section" exportparts="container: section-container">
-                <s-header
+            <st-section id="section" exportparts="container: section-container">
+                <st-header
                     heading="Contact"
                     description="Irvine, CA" 
                     headingHref="#contact"
-                >
-                </s-header>
+                ></st-header>
                 <div class="social-icons">
                     <a class="social-icon" href="mailto:seteramae@gmail.com?Subject=Hi!" target="_blank" title="mail">
                         <ion-icon name="mail"></ion-icon>
@@ -55,10 +56,10 @@ export default class Footer extends LitElement {
                         <ion-icon name="logo-github"></ion-icon>
                     </a>
                 </div>
-            </s-section>
+            </st-section>
         </footer>
         `;
     }
 }
 
-customElements.define('s-footer', Footer);
+customElements.define('st-footer', Footer);

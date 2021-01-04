@@ -32,10 +32,10 @@ export default class Button extends LitElement {
 
     render() {
         return html` <a id="container" href=${ifDefined(this.href)}>
-            <s-text id="text" exportparts="container: content" label=${this.label}>${this.label}</s-text>
+            <st-text id="text" exportparts="container: content" label=${this.label}>${this.label}</st-text>
         </a>
         `;
     }
 }
 
-customElements.define('s-button', Button);
+customElements.define('st-button', Button);

@@ -6,27 +6,27 @@ export default {
 };
 
 export const Overview = () => html`
-  <s-section>
+  <st-section>
     <h1>Some Heading</h1>
-  </s-section>
+  </st-section>
 
-  <s-section heading="Section 1" type="secondary" alignment="left">
-    <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
-  </s-section>
-  <s-section heading="Section 2" alignment="right">
-    <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
-  </s-section>
-  <s-section heading="Section 3" type="secondary"  alignment="left">
-    <s-image src="https://via.placeholder.com/200" clip="circle"></s-image>
-  </s-section>
+  <st-section heading="Section 1" type="secondary" alignment="left">
+    <st-image src="https://via.placeholder.com/200" clip="circle"></st-image>
+  </st-section>
+  <st-section heading="Section 2" alignment="right">
+    <st-image src="https://via.placeholder.com/200" clip="circle"></st-image>
+  </st-section>
+  <st-section heading="Section 3" type="secondary"  alignment="left">
+    <st-image src="https://via.placeholder.com/200" clip="circle"></st-image>
+  </st-section>
 `
 export const Left = () => html`
-  <s-section alignment="left">
+  <st-section alignment="left">
     <h1>Some Heading</h1>
-  </s-section>
+  </st-section>
 `
 export const Right = () => html`
-  <s-section alignment="right">
+  <st-section alignment="right">
     <h1>Some Heading</h1>
-  </s-section>
+  </st-section>
 `

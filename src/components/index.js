@@ -7,4 +7,3 @@ import './image/Image';
 import './navigation/Navigation';
 import './section/Section';
 import './text/Text';
-import '../pages/Home/Home';
