@@ -6,11 +6,5 @@ export default {
 };
 
 export const Overview = () => html`
-    <st-image src="https://via.placeholder.com/200"></st-image>
-
-    <st-image src="https://via.placeholder.com/200" clip="circle"></st-image>
-
-    <st-image src="https://via.placeholder.com/200" clip="diamond"></st-image>
-
-    <st-image src="https://via.placeholder.com/200" clip="triangle"></st-image>
+  <st-image src="https://via.placeholder.com/200" caption="This is an image" aspect-ratio="16:9"></st-image>
 `

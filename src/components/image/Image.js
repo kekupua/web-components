@@ -8,6 +8,8 @@ export default class Image extends LitElement {
             src: {type: String},
             alt: {type: String},
             clip: {type: String}, // Enum ["circle", "diamond", "triangle"]
+            frame: {type: Boolean},
+            caption: {type: String},
             aspectRatio: {type: String, attribute: "aspect-ratio"}
         }
     }
@@ -17,8 +19,16 @@ export default class Image extends LitElement {
             :host {
                 display: inline-block;
             }
+            figure {
+                margin: 0;
+            }
             img {
                 vertical-align: top;
+                height: 100%;
+                width: 100%;
+            }
+            figcaption {
+                text-align: center;
             }
             :host([clip="circle"]) #image {
                 clip-path: circle(50%);
@@ -29,14 +39,23 @@ export default class Image extends LitElement {
             :host([clip="triangle"]) #image {
                 clip-path: polygon(0 100%, 50% 0, 100% 100%);
             }
+            :host([frame]) #image {
+                padding: 1px;
+                border: 1px solid black;
+            }
         `;
     }
     
     render() {
         let template = html`
-            <img id="image" part="container" src="${this.src}" alt="${ifDefined(this.alt)}">
+            <figure>
+                <img id="image" part="container" src="${this.src}" alt="${ifDefined(this.alt)}">
+                ${this.caption ? html`<figcaption><st-text>${this.caption}</st-text></figcaption>` : null}
+            </figure>
         `;
-        return template;
+        if (this.aspectRatio) {
+            return renderAspectRatio(this.aspectRatio, template);
+        } return template;
     }
 }
 
