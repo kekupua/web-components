@@ -10,7 +10,8 @@
     "build": "rollup -c -w",
     "build-storybook": "build-storybook",
     "watch:styles": "sass --watch src/styles/sass:public/stylesheets",
-    "publish:npm": "npm run publish --access public"
+    "publish:npm": "npm run publish --access public",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
