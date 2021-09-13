@@ -5,6 +5,4 @@ export default {
   title: 'Components/Navigation',
 };
 
-export const Default = () => html`
-  <st-nav alignment="right"></st-nav>
-`
+export const Default = () => html` <st-nav alignment="right"></st-nav> `;
