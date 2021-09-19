@@ -1,17 +1,17 @@
 import { html } from 'lit-html';
-import './Header';
+import { title, subtitle, paragraph } from '../../lib/test.js';
 
 export default {
   title: 'Components/Header',
 };
 
-export const Overview = () => html`
-  <st-header
-    subheading="Interest in Earth’s hellish neighbour explodes after the detection of phosphine, a potential marker of life."
-    description="Interest in Earth’s hellish neighbour explodes after the detection of phosphine, a potential marker of life."
-  >
-    <h2 class="st-text accent" slot="heading">
-      Life on Venus? Scientists hunt for the truth
-    </h2>
-  </st-header>
+const HeaderContent = html`
+  <h2 slot="heading">${title}</h2>
+  <h3 slot="subheading">${subtitle}</h3>
+  <p slot="description">${paragraph}</p>
+`;
+
+export const Default = () => html` <st-header> ${HeaderContent} </st-header> `;
+export const Center = () => html`
+  <st-header layout="center"> ${HeaderContent} </st-header>
 `;

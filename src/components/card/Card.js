@@ -1,6 +1,9 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map';
 import { ifDefined } from 'lit/directives/if-defined';
+import baseStyles from '../../styles/base';
+import textStyles from '../../styles/text/text';
+import styles from './CardStyles';
 
 export default class Card extends LitElement {
   static get properties() {
@@ -15,57 +18,7 @@ export default class Card extends LitElement {
     };
   }
   static get styles() {
-    return css`
-      :host {
-        display: inline-block;
-        width: 350px;
-      }
-      #container {
-        border: var(--size-050) solid var(--colors-gray-400);
-        border-radius: var(--size-200);
-        overflow: hidden;
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-      .link {
-        color: black;
-      }
-      .image::part(container) {
-        max-width: 100%;
-        max-height: 100%;
-      }
-      .transparent-label {
-        width: 100%;
-        box-sizing: border-box;
-        padding: var(--size-300);
-        background: var(--colors-white-800);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: transform 0.4s;
-      }
-      #container:hover .transparent-label {
-        transform: translateY(0);
-      }
-      .header {
-        margin-bottom: 0;
-      }
-      :host([static]) .transparent-label {
-        transform: none;
-      }
-      :host([contain]) #container {
-        background-size: contain;
-      }
-      @media screen and (min-width: 960px) {
-        .transparent-label {
-          transform: translateY(100%);
-        }
-      }
-    `;
+    return [baseStyles, textStyles, styles];
   }
   render() {
     const containerClasses = {
@@ -80,13 +33,11 @@ export default class Card extends LitElement {
           style="background-image: url(${this.image})"
         >
           <div class="transparent-label">
-            <st-header
-              class="header"
-              exportparts="heading, subheading, description"
-              heading="${ifDefined(this.heading)}"
-              subheading="${ifDefined(this.subheading)}"
-              description="${ifDefined(this.description)}"
-            ></st-header>
+            <st-header>
+              <slot name="subheading" slot="subheading"></slot>
+              <slot class="st-text-300" name="heading" slot="heading"></slot>
+              <slot name="description" slot="description"></slot>
+            </st-header>
           </div>
         </div>
       </a>

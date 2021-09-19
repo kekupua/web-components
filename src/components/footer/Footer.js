@@ -1,50 +1,21 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html } from 'lit';
+import baseStyles from '../../styles/base';
+import textStyles from '../../styles/text/text';
+import styles from './FooterStyles';
 
 export default class Footer extends LitElement {
   static get styles() {
-    return css`
-      :host {
-        display: block;
-      }
-      #section::part(container) {
-        background: #37392e;
-        text-align: center;
-        justify-content: center;
-      }
-      st-header::part(heading),
-      st-header::part(description) {
-        color: var(--colors-white-700);
-        margin-bottom: var(--size-100);
-      }
-      .social-icons > * ~ * {
-        margin-left: var(--spacer-200);
-      }
-      .social-icons a {
-        text-decoration: none;
-        color: var(--colors-white-700);
-      }
-      ion-icon {
-        font-size: var(--size-400);
-        color: var(--colors-white-700);
-      }
-      @media screen and (min-width: 480px) {
-        #section::part(container) {
-          background: #37392e;
-          text-align: left;
-        }
-      }
-    `;
+    return [baseStyles, textStyles, styles];
   }
 
   render() {
     return html`
-      <footer id="container" part="container">
+      <footer part="container">
         <st-section id="section" exportparts="container: section-container">
-          <st-header
-            heading="Contact"
-            description="Irvine, CA"
-            headingHref="#contact"
-          ></st-header>
+          <st-header>
+            <h2 slot="heading">Contact</h2>
+            <p slot="description">Irvine, CA</p>
+          </st-header>
           <div class="social-icons">
             <a
               class="social-icon"

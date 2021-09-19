@@ -12,32 +12,41 @@ export default css`
   }
   a {
     text-decoration: none;
-    color: rgb(0, 154, 228);
   }
-  [class|='st-text'] {
+  .st-text,
+  .st-text::slotted(*) {
     font-family: var(--font-family-default), sans-serif;
-    font-size: var(--font-size-var, --font-size-100);
+    font-size: var(--font-size-var, var(--font-size-100));
+    line-height: 1.6;
   }
-  [class|='st-text'].accent {
+  .st-text-accent,
+  .st-text-accent::slotted(*) {
     font-family: var(--font-family-accent), sans-serif;
-    font-size: var(--font-size-var, --font-size-500);
+    font-size: var(--font-size-var, var(--font-size-500));
+    line-height: 1.2;
   }
-  .st-text-100 {
+  .st-text-100,
+  .st-text-100::slotted(*) {
     --font-size-var: var(--font-size-100);
   }
-  .st-text-200 {
+  .st-text-200,
+  .st-text-200::slotted(*) {
     --font-size-var: var(--font-size-200);
   }
-  .st-text-300 {
+  .st-text-300,
+  .st-text-300::slotted(*) {
     --font-size-var: var(--font-size-300);
   }
-  .st-text-400 {
+  .st-text-400,
+  .st-text-400::slotted(*) {
     --font-size-var: var(--font-size-400);
   }
-  .st-text-500 {
+  .st-text-500,
+  .st-text-500::slotted(*) {
     --font-size-var: var(--font-size-500);
   }
-  .st-text-600 {
+  .st-text-600,
+  .st-text-600::slotted(*) {
     --font-size-var: var(--font-size-600);
   }
 `;

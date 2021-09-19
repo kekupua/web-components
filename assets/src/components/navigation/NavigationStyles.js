@@ -5,12 +5,24 @@ import '../../../node_modules/lit/node_modules/lit-element/lit-element.js';
 
 var styles = r`
   :host {
-    display: inline-grid;
-    gap: var(--size-200);
-    max-width: var(--view-sm);
+    background: var(--section-bg-1);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-nav);
   }
-  :host([layout='center']) {
+  :host([alignment='center']) {
     text-align: center;
+  }
+  :host([alignment='right']) {
+    text-align: right;
+  }
+  ::slotted(*) {
+    display: inline-block;
+    padding: var(--size-300);
+    color: var(--colors-gray-200);
+  }
+  ::slotted(*:hover) {
+    color: var(--colors-gray-400);
   }
 `;
 

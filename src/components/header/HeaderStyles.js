@@ -2,18 +2,11 @@ import { css } from 'lit';
 
 export default css`
   :host {
-    width: 100%;
-    display: inline-block;
-    margin-bottom: var(--size-200);
+    display: inline-grid;
+    gap: var(--size-200);
+    max-width: var(--view-sm);
   }
-  #content {
-    display: flex;
-    flex-direction: column;
-  }
-  #subheading::part(container) {
-    font-weight: normal;
-  }
-  :host([alignment='center']) #content {
+  :host([layout='center']) {
     text-align: center;
   }
 `;

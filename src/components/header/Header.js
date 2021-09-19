@@ -1,30 +1,29 @@
 import { LitElement, html } from 'lit';
-import styles from './HeaderStyles.js';
+import baseStyles from '../../styles/base';
+import textStyles from '../../styles/text/text';
+import styles from './HeaderStyles';
 
 export default class Header extends LitElement {
+  constructor() {
+    super();
+    this.layout = 'left';
+  }
+
   static get properties() {
     return {
-      alignment: { type: String },
-      hLevel: { type: Number },
-      heading: { type: String },
-      headingHref: { type: String },
-      subheading: { type: String },
-      subheadingHref: { type: String },
-      description: { type: String },
+      layout: { type: String }, // Left, Center
     };
   }
 
   static get styles() {
-    return [styles];
+    return [baseStyles, textStyles, styles];
   }
 
   render() {
     return html`
-      <div id="container" part="container">
-        <slot name="subheading"></slot>
-        <slot name="heading"></slot>
-        <slot name="description"></slot>
-      </div>
+      <slot class="st-text-accent st-text-200" name="subheading"></slot>
+      <slot class="st-text-accent" name="heading"></slot>
+      <slot class="st-text" name="description"></slot>
     `;
   }
 }
