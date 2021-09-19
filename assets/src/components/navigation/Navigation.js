@@ -1,6 +1,9 @@
-import { LitElement, html, css } from 'lit';
+import { css as r } from '../../../node_modules/@lit/reactive-element/css-tag.js';
+import '../../../node_modules/@lit/reactive-element/reactive-element.js';
+import { html as y } from '../../../node_modules/lit/node_modules/lit-html/lit-html.js';
+import { LitElement as n } from '../../../node_modules/lit/node_modules/lit-element/lit-element.js';
 
-export default class Navigation extends LitElement {
+class Navigation extends n {
   constructor() {
     super();
     this.items = [
@@ -16,7 +19,7 @@ export default class Navigation extends LitElement {
     };
   }
   static get styles() {
-    return css`
+    return r`
       #container {
         position: -webkit-sticky;
         position: sticky;
@@ -42,7 +45,7 @@ export default class Navigation extends LitElement {
   mapNavItems(items) {
     return items
       ? items.map((item, index) => {
-          return html`<st-text
+          return y`<st-text
             href="${item.href}"
             class="nav-item"
             part="nav-item nav-item-${index}"
@@ -53,7 +56,7 @@ export default class Navigation extends LitElement {
       : null;
   }
   render() {
-    return html`
+    return y`
       <nav id="container" part="container">
         <div id="content" part="content">
           <div id="nav-items">${this.mapNavItems(this.items)}</div>
@@ -64,3 +67,5 @@ export default class Navigation extends LitElement {
 }
 
 customElements.define('st-nav', Navigation);
+
+export default Navigation;

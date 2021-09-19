@@ -1,7 +1,10 @@
-import { LitElement, html, css } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined';
+import { css as r } from '../../../node_modules/@lit/reactive-element/css-tag.js';
+import '../../../node_modules/@lit/reactive-element/reactive-element.js';
+import { html as y } from '../../../node_modules/lit/node_modules/lit-html/lit-html.js';
+import { LitElement as n } from '../../../node_modules/lit/node_modules/lit-element/lit-element.js';
+import { ifDefined as l } from '../../../node_modules/lit/node_modules/lit-html/directives/if-defined.js';
 
-export default class CustomSection extends LitElement {
+class CustomSection extends n {
   static get properties() {
     return {
       alignment: { type: String },
@@ -11,7 +14,7 @@ export default class CustomSection extends LitElement {
     };
   }
   static get styles() {
-    return css`
+    return r`
       :host {
         display: block;
       }
@@ -42,15 +45,15 @@ export default class CustomSection extends LitElement {
   }
 
   render() {
-    return html`
+    return y`
       <section id="container" part="container">
         <div id="content" part="content">
           <slot name="header">
             <st-header
               part="header"
-              heading="${ifDefined(this.heading)}"
-              subheading="${ifDefined(this.subheading)}"
-              description=${ifDefined(this.description)}
+              heading="${l(this.heading)}"
+              subheading="${l(this.subheading)}"
+              description=${l(this.description)}
               exportparts="heading subheading description"
             ></st-header>
           </slot>
@@ -62,3 +65,5 @@ export default class CustomSection extends LitElement {
 }
 
 customElements.define('st-section', CustomSection);
+
+export default CustomSection;

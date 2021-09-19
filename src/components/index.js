@@ -1,9 +1,8 @@
 import '../styles/tokens.css';
+import '../styles/text/text.css';
 import './button/Button';
 import './card/Card';
 import './footer/Footer';
 import './header/Header';
-import './image/Image';
 import './navigation/Navigation';
 import './section/Section';
-import './text/Text';

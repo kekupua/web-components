@@ -1,8 +1,11 @@
-import { LitElement, html, css } from 'lit';
-import { classMap } from 'lit/directives/class-map';
-import { ifDefined } from 'lit/directives/if-defined';
+import { css as r } from '../../../node_modules/@lit/reactive-element/css-tag.js';
+import '../../../node_modules/@lit/reactive-element/reactive-element.js';
+import { html as y } from '../../../node_modules/lit/node_modules/lit-html/lit-html.js';
+import { LitElement as n } from '../../../node_modules/lit/node_modules/lit-element/lit-element.js';
+import { ifDefined as l } from '../../../node_modules/lit/node_modules/lit-html/directives/if-defined.js';
+import { classMap as o } from '../../../node_modules/lit/node_modules/lit-html/directives/class-map.js';
 
-export default class Card extends LitElement {
+class Card extends n {
   static get properties() {
     return {
       image: { type: String }, // URL
@@ -15,7 +18,7 @@ export default class Card extends LitElement {
     };
   }
   static get styles() {
-    return css`
+    return r`
       :host {
         display: inline-block;
         width: 350px;
@@ -71,21 +74,21 @@ export default class Card extends LitElement {
     const containerClasses = {
       wide: this.wide,
     };
-    const template = html`
-      <a class="link" href=${ifDefined(this.href)}>
+    const template = y`
+      <a class="link" href=${l(this.href)}>
         <div
           id="container"
           part="container"
-          class="${classMap(containerClasses)}"
+          class="${o(containerClasses)}"
           style="background-image: url(${this.image})"
         >
           <div class="transparent-label">
             <st-header
               class="header"
               exportparts="heading, subheading, description"
-              heading="${ifDefined(this.heading)}"
-              subheading="${ifDefined(this.subheading)}"
-              description="${ifDefined(this.description)}"
+              heading="${l(this.heading)}"
+              subheading="${l(this.subheading)}"
+              description="${l(this.description)}"
             ></st-header>
           </div>
         </div>
@@ -96,3 +99,5 @@ export default class Card extends LitElement {
 }
 
 customElements.define('st-card', Card);
+
+export default Card;

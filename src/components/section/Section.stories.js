@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit-html';
 import './Section';
 
 export default {

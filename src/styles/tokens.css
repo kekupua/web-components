@@ -18,6 +18,14 @@ html {
   /* Fonts */
   --font-family-default: 'Lato';
   --font-family-accent: 'Montserrat';
+  --font-size-050: 0.563rem;
+  --font-size-075: 0.75rem;
+  --font-size-100: 1rem;
+  --font-size-200: 1.333rem;
+  --font-size-300: 1.777rem;
+  --font-size-400: 2.369rem;
+  --font-size-500: 3.157rem;
+  --font-size-600: 4.209rem;
 
   /* Sizes */
   --size-base: 8px;

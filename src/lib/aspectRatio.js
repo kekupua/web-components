@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit';
 export const renderAspectRatio = (aspectRatio, element) => {
   if (!aspectRatio) return null;
   let [x, y] = aspectRatio.split(':');
