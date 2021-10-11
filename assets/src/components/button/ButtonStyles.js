@@ -14,10 +14,10 @@ var styles = r`
     cursor: pointer;
     border-radius: var(--size-050);
     padding: var(--size-200);
-    background-color: var(--colors-gray-400);
+    background-color: var(--color-gray-400);
     text-decoration: none;
-    box-shadow: var(--colors-black-600) 1px 1px 8px;
-    color: var(--colors-black-800);
+    box-shadow: var(--color-black-600) 1px 1px 8px;
+    color: var(--color-black-800);
   }
   #container:hover {
     color: black;
@@ -31,12 +31,12 @@ var styles = r`
   }
 
   :host([type='primary']) #container {
-    background-color: var(--colors-theme-5);
-    color: var(--colors-white-800);
+    background-color: var(--color-theme-5);
+    color: var(--color-white-800);
   }
   :host([type='secondary']) #container {
-    background-color: var(--colors-theme-3);
-    color: var(--colors-white-800);
+    background-color: var(--color-theme-3);
+    color: var(--color-white-800);
   }
   :host([type]) #container:hover {
     color: white;

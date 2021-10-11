@@ -1,8 +1,11 @@
 {
   "name": "@kekupua/web-components",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A collection of Web Components built using Lit Element",
   "main": "assets/src/components/index.js",
+  "files": [
+    "assets"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run build\" \"npm run storybook\" -c magenta,yellow",
@@ -41,6 +44,7 @@
     "eslint": "^7.32.0",
     "generate-template-files": "^3.2.0",
     "github-repository": "^0.4.0",
+    "ionicons": "^5.5.3",
     "lit": "^2.0.0-rc.4",
     "lit-html": "^1.4.1",
     "postcss": "^8.2.2",

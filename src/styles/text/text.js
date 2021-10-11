@@ -49,4 +49,12 @@ export default css`
   .st-text-600::slotted(*) {
     --font-size-var: var(--font-size-600);
   }
+  .st-text-700,
+  .st-text-700::slotted(*) {
+    --font-size-var: var(--font-size-700);
+  }
+  .st-text-800,
+  .st-text-800::slotted(*) {
+    --font-size-var: var(--font-size-800);
+  }
 `;

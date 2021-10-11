@@ -7,7 +7,8 @@ var styles = r`
   :host {
     display: inline-grid;
     gap: var(--size-200);
-    max-width: var(--view-sm);
+    max-width: 720px;
+    text-align: left;
   }
   :host([layout='center']) {
     text-align: center;

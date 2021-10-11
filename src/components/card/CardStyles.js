@@ -5,7 +5,7 @@ export default css`
     width: 350px;
   }
   #container {
-    border: var(--size-050) solid var(--colors-gray-400);
+    border: var(--size-050) solid var(--color-gray-400);
     border-radius: var(--size-200);
     overflow: hidden;
     position: relative;
@@ -24,9 +24,12 @@ export default css`
   }
   .transparent-label {
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: var(--size-300);
-    background: var(--colors-white-800);
+    background: var(--color-white-800);
     position: absolute;
     bottom: 0;
     left: 0;

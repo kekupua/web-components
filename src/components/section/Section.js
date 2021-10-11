@@ -18,10 +18,9 @@ export default class CustomSection extends LitElement {
 
   render() {
     return html`
-      <section id="container" part="container">
-        <div id="content" part="content">
-          <slot class="st-text" part="default-content"></slot>
-        </div>
+      <section part="container">
+        <slot name="header"></slot>
+        <slot class="st-text" part="default-content"></slot>
       </section>
     `;
   }

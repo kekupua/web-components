@@ -15,9 +15,9 @@ export default css`
   ::slotted(*) {
     display: inline-block;
     padding: var(--size-300);
-    color: var(--colors-gray-200);
+    color: var(--color-gray-200);
   }
   ::slotted(*:hover) {
-    color: var(--colors-gray-400);
+    color: var(--color-gray-400);
   }
 `;

@@ -14,7 +14,7 @@ class Footer extends n {
     return y`
       <footer part="container">
         <st-section id="section" exportparts="container: section-container">
-          <st-header>
+          <st-header layout="center">
             <h2 slot="heading">Contact</h2>
             <p slot="description">Irvine, CA</p>
           </st-header>

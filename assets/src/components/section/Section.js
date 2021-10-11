@@ -20,10 +20,9 @@ class CustomSection extends n {
 
   render() {
     return y`
-      <section id="container" part="container">
-        <div id="content" part="content">
-          <slot class="st-text" part="default-content"></slot>
-        </div>
+      <section part="container">
+        <slot name="header"></slot>
+        <slot class="st-text" part="default-content"></slot>
       </section>
     `;
   }
