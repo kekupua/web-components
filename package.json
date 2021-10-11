@@ -8,9 +8,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run build\" \"npm run storybook\" -c magenta,yellow",
+    "start": "concurrently \"npm run build:watch\" \"npm run storybook\" -c magenta,yellow",
     "storybook": "start-storybook -p 6006 --quiet",
-    "build": "rollup -c -w",
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
     "build-storybook": "build-storybook",
     "watch:styles": "sass --watch src/styles/sass:public/stylesheets",
     "publish:npm": "npm run publish --access public",
