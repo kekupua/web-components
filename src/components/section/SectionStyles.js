@@ -4,7 +4,7 @@ export default css`
     --header-margin: var(--size-300);
 
     max-width: var(--content-max-width);
-    padding: var(--spacer-800);
+    padding: var(--section-padding);
   }
   [part='container'] {
     width: 100%;
