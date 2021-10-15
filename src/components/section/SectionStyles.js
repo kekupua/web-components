@@ -3,11 +3,11 @@ export default css`
   :host {
     --header-margin: var(--size-300);
 
-    max-width: var(--section-max-width);
     padding: var(--section-padding);
-    margin: auto;
   }
   [part='container'] {
+    margin: auto;
+    max-width: var(--section-max-width);
     width: 100%;
     display: flex;
     flex-direction: column;
