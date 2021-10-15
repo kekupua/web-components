@@ -100,6 +100,7 @@ html {
   --section-vertical-padding: var(--size-400);
   --section-horizontal-padding: var(--size-400);
   --section-padding: var(--section-vertical-padding) var(--section-horizontal-padding);
+  --section-max-width: var(--view-xxl);
   /* Constants */
   --z-index-nav: 50;
 }

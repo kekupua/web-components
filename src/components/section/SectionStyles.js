@@ -3,8 +3,9 @@ export default css`
   :host {
     --header-margin: var(--size-300);
 
-    max-width: var(--content-max-width);
+    max-width: var(--section-max-width);
     padding: var(--section-padding);
+    margin: auto;
   }
   [part='container'] {
     width: 100%;
