@@ -22,7 +22,7 @@ export default class Header extends LitElement {
   render() {
     return html`
       <slot class="st-text-accent st-text-200" name="subheading"></slot>
-      <slot class="st-text-accent" name="heading"></slot>
+      <slot class="st-text-accent st-text-500" name="heading"></slot>
       <slot class="st-text" name="description"></slot>
     `;
   }

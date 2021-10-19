@@ -2,7 +2,7 @@ import { css } from 'lit';
 export default css`
   :host {
     display: inline-block;
-    width: 350px;
+    width: 310px;
   }
   #container {
     border: var(--size-050) solid var(--color-gray-400);

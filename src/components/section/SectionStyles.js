@@ -5,6 +5,7 @@ export default css`
 
     padding: var(--section-padding);
   }
+  /* Container is used to constrain content on wide screens */
   [part='container'] {
     margin: auto;
     max-width: var(--section-max-width);
@@ -28,5 +29,12 @@ export default css`
 
   [name='header']::slotted([slot='header']:last-of-type) {
     margin-bottom: var(--header-margin);
+  }
+
+  :not([name])::slotted(st-section) {
+    --section-padding: 0;
+  }
+  :not([name])::slotted(st-section:not(:last-child)) {
+    margin-bottom: var(--section-vertical-padding);
   }
 `;

@@ -1,6 +1,6 @@
 {
   "name": "@kekupua/web-components",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "A collection of Web Components built using Lit Element",
   "main": "assets/src/components/index.js",
   "files": [

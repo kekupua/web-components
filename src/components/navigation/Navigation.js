@@ -15,7 +15,7 @@ export default class Navigation extends LitElement {
   render() {
     return html`
       <nav part="container">
-        <slot class="st-text"></slot>
+        <slot class="st-text-accent st-text-100"></slot>
       </nav>
     `;
   }
