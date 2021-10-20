@@ -19,16 +19,17 @@ export default class Button extends LitElement {
   }
 
   render() {
+    const icon = html`<ion-icon part='icon' name="${this.icon}"></ion-icon>`
     return html`
-      <a id="container" href=${ifDefined(this.href)}>
+      <button part='container' href=${ifDefined(this.href)}>
         ${this.icon && !this.trailingIcon
-          ? html`<ion-icon name="${this.icon}"></ion-icon>`
+          ? icon
           : null}
         <slot class="st-text"> ${this.label} </slot>
         ${this.icon && this.trailingIcon
-          ? html`<ion-icon class="trailing" name="${this.icon}"></ion-icon>`
+          ? icon
           : null}
-      </a>
+      </button>
     `;
   }
 }

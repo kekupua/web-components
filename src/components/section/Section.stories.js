@@ -5,15 +5,15 @@ import './Section';
 export default {
   title: 'Components/Section',
   argTypes: {
-    headerVariant: {
-      options: ['left', 'center'],
+    alignment: {
+      options: ['left', 'center', 'right'],
       control: { type: 'select' }
     }
   }
 };
 
 export const Overview = (options) => html`
-  <st-section>
+  <st-section alignment=${options.alignment}>
     <st-header slot="header" layout=${options.headerVariant}>
       <h2 slot="heading">${title}</h2>
       <h3 slot="subheading">${subtitle}</h3>

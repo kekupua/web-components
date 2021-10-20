@@ -2,11 +2,21 @@ import { css } from 'lit';
 
 export default css`
   :host {
-    display: inline-block;
     --icon-gap: var(--size-100);
+    --icon-size: var(--size-200);
+
+    display: inline-block;
+    user-select: none;
   }
-  #container {
-    display: inline-flex;
+  [part='container'] {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: var(--icon-gap);
     align-items: center;
     cursor: pointer;
     border-radius: var(--size-050);
@@ -16,26 +26,23 @@ export default css`
     box-shadow: var(--color-black-600) 1px 1px 8px;
     color: var(--color-black-800);
   }
-  #container:hover {
+  [part='container']:hover {
     color: black;
   }
-  ion-icon {
-    margin-right: var(--icon-gap);
-  }
-  :host([trailing-icon]) ion-icon {
-    margin-right: 0;
-    margin-left: var(--icon-gap);
-  }
-
-  :host([type='primary']) #container {
+  :host([type='primary']) [part='container'] {
     background-color: var(--color-theme-5);
     color: var(--color-white-800);
   }
-  :host([type='secondary']) #container {
+  :host([type='secondary']) [part='container'] {
     background-color: var(--color-theme-3);
     color: var(--color-white-800);
   }
-  :host([type]) #container:hover {
+  :host([type]) [part='container']:hover {
     color: white;
+  }
+  
+  [part='icon'] {
+    width: var(--icon-size);
+    height: var(--icon-size);
   }
 `;
